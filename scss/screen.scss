@@ -1,5 +1,13 @@
 @import "reset";
 
+#slides {
+    display:none;
+}
+
+ul.slidesjs-pagination{
+	display:none;
+}
+
 body{
 	background-color: black;
 	color: white;
@@ -17,8 +25,9 @@ a{
 
 header{
 	width: 100%;
-	background-color: rgba(255,255,255,.5);
+	background-color: rgba(0,0,0,.5);
 	position: fixed;
+	z-index: 10000000;
 	.asoiaf{
 		width: 49%;
 		font-size: 36px;
@@ -38,15 +47,24 @@ header{
 .hero{
 	text-align: center;
 	width: 100%;
-	background-image: url('/img/raven.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 1000px;
+	position: relative;
+	.title{
+		font-style: italic;
+		font-size: 36px;
+		position: absolute;
+		top: 95%;
+		z-index: 100;
+		text-align: center;
+		width: 100%;
+	}
 	img{
-		display: none;
+		display: block;
+		height: auto;
+		width: 100%;
+		z-index: 2;
 	}
 }
+
 .history header .nav .lhistory{
 	text-shadow: 1px 1px 5px white;
 }
@@ -57,7 +75,7 @@ header{
 	text-shadow: 1px 1px 5px white;
 }
 @media only screen and (max-width: 600px){
-	body{
+	.home, .history, .map, .houses{
 		header{
 			position: static;
 			.asoiaf{
@@ -75,14 +93,6 @@ header{
 					margin: 10px 30px;
 					font-size: 22px;
 				}
-			}
-		}
-		.hero{
-			background-image: none;
-			img{
-				display: block;
-				height: auto;
-				width: 100%;
 			}
 		}
 	}

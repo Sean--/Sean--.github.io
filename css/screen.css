@@ -55,6 +55,14 @@ table {
   background-position: 0 0;
 }
 
+#slides {
+  display: none;
+}
+
+ul.slidesjs-pagination {
+  display: none;
+}
+
 body {
   background-color: black;
   color: white;
@@ -72,8 +80,9 @@ a {
 
 header {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
+  z-index: 10000000;
 }
 header .asoiaf {
   width: 49%;
@@ -94,14 +103,22 @@ header .nav li {
 .hero {
   text-align: center;
   width: 100%;
-  background-image: url("/img/raven.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 1000px;
+  position: relative;
+}
+.hero .title {
+  font-style: italic;
+  font-size: 36px;
+  position: absolute;
+  top: 95%;
+  z-index: 100;
+  text-align: center;
+  width: 100%;
 }
 .hero img {
-  display: none;
+  display: block;
+  height: auto;
+  width: 100%;
+  z-index: 2;
 }
 
 .history header .nav .lhistory {
@@ -117,31 +134,23 @@ header .nav li {
 }
 
 @media only screen and (max-width: 600px) {
-  body header {
+  .home header, .history header, .map header, .houses header {
     position: static;
   }
-  body header .asoiaf {
+  .home header .asoiaf, .history header .asoiaf, .map header .asoiaf, .houses header .asoiaf {
     width: 100%;
     text-align: center;
     margin-bottom: 5px;
     padding: 10px;
   }
-  body header .nav {
+  .home header .nav, .history header .nav, .map header .nav, .houses header .nav {
     width: 100%;
     text-align: center;
     margin-bottom: 5px;
   }
-  body header .nav li {
+  .home header .nav li, .history header .nav li, .map header .nav li, .houses header .nav li {
     display: inline-block;
     margin: 10px 30px;
     font-size: 22px;
-  }
-  body .hero {
-    background-image: none;
-  }
-  body .hero img {
-    display: block;
-    height: auto;
-    width: 100%;
   }
 }

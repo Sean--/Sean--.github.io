@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/reset.css" media="all">
     <link rel="stylesheet" type="text/css" href="/css/screen.css" media="all">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="jquery.slides.min.js"></script>
 </head>
 <body>
 <div class="home">
@@ -24,13 +26,55 @@
 
 	<section class="hero">
 		<div class="title">
-			Hey this is the title thing
+			“When you play a game of thrones you win or you die.”
 		</div>
-		<img src="img/raven.jpg">
+		<div id="slides">
+			<img src="img/raven.jpg" alt="A Raven">
+		    <img src="img/waterfall.jpg" alt="Waterfall">
+		    <img src="img/drogon.jpg" alt="Dragon">
+		    <img src="img/valar.jpg" alt="All Men Must Die">
+		    <img src="img/throne.jpg" alt="The iron throne">
+		</div>
 	</section>
 
 	<section class="main">
 	</section>
+
+<script>
+    $(function(){
+    	$("#slides").slidesjs({
+       		width: 3000,
+        	height: 1700,
+        	navigation: {
+			    active: false,
+			        // [boolean] Generates next and previous buttons.
+			        // You can set to false and use your own buttons.
+			        // User defined buttons must have the following:
+			        // previous button: class="slidesjs-previous slidesjs-navigation"
+			        // next button: class="slidesjs-next slidesjs-navigation"
+			    effect: "fade"
+			        // [string] Can be either "slide" or "fade".
+		    },
+		    play: {
+			    active: false,
+			        // [boolean] Generate the play and stop buttons.
+			        // You cannot use your own buttons. Sorry.
+			    effect: "fade",
+			        // [string] Can be either "slide" or "fade".
+			    interval: 3000,
+			        // [number] Time spent on each slide in milliseconds.
+			    auto: true,
+			        // [boolean] Start playing the slideshow on load.
+			    swap: true,
+			        // [boolean] show/hide stop and play buttons
+			    pauseOnHover: false,
+			        // [boolean] pause a playing slideshow on hover
+			    restartDelay: 2500
+			        // [number] restart delay on inactive slideshow
+			}
+    	});
+    });
+</script>
 
 </div>
 </body>
