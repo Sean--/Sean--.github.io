@@ -11,6 +11,8 @@ ul.slidesjs-pagination{
 body{
 	background-color: black;
 	color: white;
+	padding-bottom: 40px;
+	font-family: helvetica;
 }
 
 a{
@@ -19,8 +21,42 @@ a{
 }
 
 .main{
+	padding-top: 180px;
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: 1100px;
+	p{
+		font-size: 20px;
+		line-height: 1.5em;
+		padding-left: 20px;
+		span.first{
+			font-size: 29px;
+		}
+	}
+	.pure-g{
+		padding: 20px;
+		border-radius: 20px;
+		margin-top: 50px;
+		background-color: rgba(100,100,100, .2);
+		div{
+			font-size: 20px;
+			line-height: 1.5em;
+			span.housewords{
+				font-size: 28px;
+			}
+			&.pure-u-3-4{
+				padding-left: 20px;
+				vertical-align: middle;
+			}
+		}
+		img{
+			&.pure-u-2-5{
+				height: 40%;
+			}
+			&.pure-u-1-4{
+				height: 25%;
+			}
+		}
+	}
 }
 
 header{
@@ -49,6 +85,7 @@ header{
 	width: 100%;
 	position: relative;
 	.title{
+		background-color: rgba(0,0,0,.5);
 		font-style: italic;
 		font-size: 36px;
 		position: absolute;
@@ -66,13 +103,13 @@ header{
 }
 
 .history header .nav .lhistory{
-	text-shadow: 1px 1px 5px white;
+	text-shadow: 1px 1px 15px red;
 }
 .map header .nav .lmap{
-	text-shadow: 1px 1px 5px white;
+	text-shadow: 1px 1px 15px red;
 }
 .houses header .nav .lhouses{
-	text-shadow: 1px 1px 5px white;
+	text-shadow: 1px 1px 15px red;
 }
 @media only screen and (max-width: 600px){
 	.home, .history, .map, .houses{
