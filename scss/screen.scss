@@ -42,6 +42,7 @@ a{
 			line-height: 1.5em;
 			span.housewords{
 				font-size: 28px;
+				font-family: 'IM Fell Double Pica SC', serif;
 			}
 			&.pure-u-3-4{
 				padding-left: 20px;
@@ -64,6 +65,7 @@ header{
 	background-color: rgba(0,0,0,.5);
 	position: fixed;
 	z-index: 10000000;
+	font-family: 'IM Fell Double Pica SC', serif;
 	.asoiaf{
 		width: 49%;
 		font-size: 36px;
@@ -85,6 +87,7 @@ header{
 	width: 100%;
 	position: relative;
 	.title{
+		font-family: 'IM Fell Double Pica SC', serif;
 		background-color: rgba(0,0,0,.5);
 		font-style: italic;
 		font-size: 36px;

@@ -100,6 +100,7 @@ a {
 }
 .main .pure-g div span.housewords {
   font-size: 28px;
+  font-family: 'IM Fell Double Pica SC', serif;
 }
 .main .pure-g div.pure-u-3-4 {
   padding-left: 20px;
@@ -117,6 +118,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 10000000;
+  font-family: 'IM Fell Double Pica SC', serif;
 }
 header .asoiaf {
   width: 49%;
@@ -140,6 +142,7 @@ header .nav li {
   position: relative;
 }
 .hero .title {
+  font-family: 'IM Fell Double Pica SC', serif;
   background-color: rgba(0, 0, 0, 0.5);
   font-style: italic;
   font-size: 36px;
